@@ -34,12 +34,12 @@ public class PaisTest {
 		pais = new Pais();
 		pais.setId(id);
 		pais.setNome("Batista Cepelos");
-		pais.setPopulação(912344321);
+		pais.setPopulacao(912344321);
 		pais.setArea(912344321);
 		copia = new Pais();
 		copia.setId(id);
 		copia.setNome("Batista Cepelos");
-		copia.setPopulação(912344321);
+		copia.setPopulacao(912344321);
 		copia.setArea(912344321);
 		paisService = new PaisService();
 		System.out.println(pais);
@@ -54,7 +54,7 @@ public class PaisTest {
 		Pais fixture = new Pais();
 		fixture.setId(1);
 		fixture.setNome("Brasil");
-		fixture.setPopulação(207660929);
+		fixture.setPopulacao(207660929);
 		fixture.setArea(8515767);
 		PaisService novoService = new PaisService();
 		Pais novo = novoService.carregar(1);
@@ -73,8 +73,8 @@ public class PaisTest {
 	@Test
 	public void test02Atualizar() {
 		System.out.println("atualizar");
-		pais.setPopulação(999999);
-		copia.setPopulação(999999);		
+		pais.setPopulacao(999999);
+		copia.setPopulacao(999999);		
 		paisService.atualizar(pais);
 		pais = paisService.carregar(pais.getId());
 		assertEquals("testa atualizacao", pais, copia);
@@ -85,7 +85,7 @@ public class PaisTest {
 		System.out.println("excluir");
 		copia.setId(-1);
 		copia.setNome(null);
-		copia.setPopulação(0);
+		copia.setPopulacao(0);
 		copia.setArea(0);
 		paisService.excluir(id);
 		pais = paisService.carregar(id);
